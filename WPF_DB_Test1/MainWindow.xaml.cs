@@ -39,5 +39,23 @@ namespace WPF_DB_Test1
                 select c;
             lbxCustomerEx2.ItemsSource = query.ToList();
         }
+
+        private void btnQueryEx3_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from o in db.Orders
+                where o.Customer.City.Equals("London")
+                      || o.Customer.City.Equals("Paris")
+                      || o.Customer.City.Equals("USA")
+                orderby o.Customer.CompanyName
+                select new
+                {
+                    CustomerName = o.Customer.CompanyName,
+                    City = o.Customer.City,
+                    Address = o.ShipAddress
+                };
+
+            //Show the retrieved data in the listbox
+            lbxCustomerEx3.ItemsSource = query.ToList();
+        }
     }
 }

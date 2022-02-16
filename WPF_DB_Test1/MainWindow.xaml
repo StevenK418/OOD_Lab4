@@ -26,7 +26,18 @@
                     </Grid.RowDefinitions>
                     <Button Name="btnQuerytx2" Grid.Row="0" Content="Query" Width="75" Height="25" Click="btnQueryEx2_Click"/>
                     <ListBox Grid.Row="1" Name="lbxCustomerEx2" Grid.Column="0"/>
-                </Grid>
-            </TabItem>
+                    </Grid>
+                </TabItem>
+                <!--Tab 3-->
+                <TabItem Name="Ex3" Header="Ex3" Width="50">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="90*"/>
+                        </Grid.RowDefinitions>
+                        <Button Name="btnQuerytx3" Grid.Row="0" Content="Query" Width="75" Height="25" Click="btnQueryEx3_Click"/>
+                        <ListBox Grid.Row="1" Name="lbxCustomerEx3" Grid.Column="0"/>
+                    </Grid>
+                </TabItem>
         </TabControl>
 </Window>
