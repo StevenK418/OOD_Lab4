@@ -74,5 +74,35 @@ namespace WPF_DB_Test1
             //Show the retrieved data in the listbox
             lbxCustomerEx4.ItemsSource = query.ToList();
         }
+
+        private void btnQueryEx5_Click(object sender, RoutedEventArgs e)
+        {
+            Product p = new Product()
+            {
+                ProductName = "Kickapoo Jungle Joy Juice",
+                UnitPrice = 12.49m,
+                CategoryID = 1
+            };
+            db.Products.Add(p);
+            db.SaveChanges();
+
+            ShowProducts(lbxCustomerEx5);
+        }
+
+        private void ShowProducts(DataGrid currentGrid)
+        {
+            var query = from p in db.Products
+                where p.Category.CategoryName.Equals("Beverages")
+                orderby p.ProductID descending
+                select new
+                {
+                    p.ProductID,
+                    p.ProductName,
+                    p.Category.CategoryName,
+                    p.UnitPrice
+                };
+
+            currentGrid.ItemsSource = query.ToList();
+        }
     }
 }

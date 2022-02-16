@@ -50,5 +50,16 @@
                     <ListBox Grid.Row="1" Name="lbxCustomerEx4" Grid.Column="0"/>
                 </Grid>
             </TabItem>
+            <!--Tab 5-->
+            <TabItem Name="Ex5" Header="Ex5" Width="50">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="90*"/>
+                    </Grid.RowDefinitions>
+                    <Button Name="btnQuerytx5" Grid.Row="0" Content="Query" Width="75" Height="25" Click="btnQueryEx5_Click"/>
+                    <DataGrid Grid.Row="1" Name="lbxCustomerEx5" Grid.Column="0"/>
+                </Grid>
+            </TabItem>
     </TabControl>
 </Window>
