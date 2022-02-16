@@ -32,6 +32,12 @@ namespace WPF_DB_Test1
                 select c.CompanyName;
             lbxCustomerEx1.ItemsSource = query.ToList();
         }
-        
+
+        private void btnQueryEx2_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from c in db.Customers
+                select c;
+            lbxCustomerEx2.ItemsSource = query.ToList();
+        }
     }
 }
