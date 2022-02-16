@@ -57,5 +57,22 @@ namespace WPF_DB_Test1
             //Show the retrieved data in the listbox
             lbxCustomerEx3.ItemsSource = query.ToList();
         }
+
+        private void btnQueryEx4_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from p in db.Products
+                                            where p.Category.CategoryName.Equals("Beverages")
+                                            orderby p.ProductID descending 
+                                            select new
+                                            {
+                                                p.ProductID,
+                                                p.ProductName,
+                                                p.Category.CategoryName,
+                                                p.UnitPrice
+                                            };
+
+            //Show the retrieved data in the listbox
+            lbxCustomerEx4.ItemsSource = query.ToList();
+        }
     }
 }
