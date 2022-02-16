@@ -132,5 +132,17 @@ namespace WPF_DB_Test1
             db.SaveChanges();
             ShowProducts(lbxCustomerEx7);
         }
+
+        private void btnQueryEx8_Click(object sender, RoutedEventArgs e)
+        {
+            var products = from p in db.Products
+                where p.ProductName.StartsWith("Kick")
+                select p;
+
+            db.Products.RemoveRange(products);
+            db.SaveChanges();
+            ShowProducts(lbxCustomerEx8);
+        }
+
     }
 }
