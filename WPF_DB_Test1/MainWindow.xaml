@@ -6,12 +6,16 @@
         xmlns:local="clr-namespace:WPF_DB_Test1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="90*"/>
-        </Grid.RowDefinitions>
-        <Button Grid.Row="0" Content="Get Data" Width="100" Height="25" Click="Button_Click"/>
-        <ListBox Grid.Row="1" Name="Ex1ListBox"/>
-    </Grid>
+        <TabControl TabStripPlacement="Top">
+            <TabItem Name="Ex1" Header="Ex1" Width="50">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="90*"/>
+                    </Grid.RowDefinitions>
+                    <Button Name="btnQuerytx1" Grid.Row="0" Content="Query" Width="75" Height="25" Click="btnQuery_Click"/>
+                    <ListBox Grid.Row="1" Name="lbxCustomerEx1" Grid.Column="0"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
 </Window>

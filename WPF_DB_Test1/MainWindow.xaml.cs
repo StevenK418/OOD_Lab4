@@ -26,14 +26,12 @@ namespace WPF_DB_Test1
         {
             InitializeComponent();
         }
-
-        //Exercise 1 - Code to retrieve customer data from the database
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnQuery_Click(object sender, RoutedEventArgs e)
         {
             var query = from c in db.Customers
                 select c.CompanyName;
-
-            Ex1ListBox.ItemsSource = query.ToList();
+            lbxCustomerEx1.ItemsSource = query.ToList();
         }
+        
     }
 }
