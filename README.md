@@ -10,4 +10,7 @@ Github details:
 	=> Git Clone: 	https://github.com/StevenK418/OOD_Lab4.git
 	
 Developer notes: 
-			n/a 
+
+	=> Database MDF file has been imported locally for ease of use. 
+		=> Filesize larger as a result. 
+	
