@@ -144,5 +144,10 @@ namespace WPF_DB_Test1
             ShowProducts(lbxCustomerEx8);
         }
 
+        private void btnQueryEx9_Click(object sender, RoutedEventArgs e)
+        {
+            var query = db.Customers_By_City("London");
+            lbxCustomerEx9.ItemsSource = query.ToList();
+        }
     }
 }
