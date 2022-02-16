@@ -104,5 +104,18 @@ namespace WPF_DB_Test1
 
             currentGrid.ItemsSource = query.ToList();
         }
+
+        private void btnQueryEx6_Click(object sender, RoutedEventArgs e)
+        {
+            Product p1 = (db.Products
+                .Where(p => p.ProductName.StartsWith("Kick"))
+                .Select(p => p)).First();
+
+            p1.UnitPrice = 100m;
+            db.SaveChanges();
+           
+            ShowProducts(lbxCustomerEx6);
+            
+        }
     }
 }
