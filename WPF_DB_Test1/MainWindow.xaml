@@ -72,5 +72,16 @@
                     <DataGrid Grid.Row="1" Name="lbxCustomerEx6" Grid.Column="0"/>
                 </Grid>
             </TabItem>
+            <!--Tab 7-->
+            <TabItem Name="Ex7" Header="Ex7" Width="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="90*"/>
+                    </Grid.RowDefinitions>
+                    <Button Name="btnQuerytx7" Grid.Row="0" Content="Query" Width="77" Height="27" Click="btnQueryEx7_Click"/>
+                    <DataGrid Grid.Row="1" Name="lbxCustomerEx7" Grid.Column="0"/>
+                </Grid>
+            </TabItem>
     </TabControl>
 </Window>

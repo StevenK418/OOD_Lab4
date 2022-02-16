@@ -117,5 +117,20 @@ namespace WPF_DB_Test1
             ShowProducts(lbxCustomerEx6);
             
         }
+
+        private void btnQueryEx7_Click(object sender, RoutedEventArgs e)
+        {
+            var products = from p in db.Products
+                where p.ProductName.StartsWith("Kick")
+                select p;
+
+            foreach (var item in products)
+            {
+                item.UnitPrice = 100m;
+            }
+
+            db.SaveChanges();
+            ShowProducts(lbxCustomerEx7);
+        }
     }
 }
